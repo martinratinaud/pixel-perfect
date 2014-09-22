@@ -1,0 +1,73 @@
+<script type="text/html" id="pixel_perfect_template">
+    <style>
+        .<%=containerClass%> {
+            position:absolute;
+            width:100%;
+            top:0px;
+            pointer-events: none;
+            height:10000px;
+            background:url("<%=bg%>") top center no-repeat;
+            opacity:0;
+            z-index:2000000000;
+        }
+
+        #<%=wrapperId%> section {
+            left:10px;
+            margin:0px;
+            padding:2px;
+            position: fixed;
+            border:none;
+            background-color:black;
+            color:white;
+            cursor:pointer;
+            z-index:2000000001;
+        }
+        #<%=wrapperId%> button {
+            color:black;
+            border:1px solid #E77E23;
+        }
+        #<%=wrapperId%> section a{
+            display:block;
+            color:white;
+            text-align:center;
+            width:200px;
+        }
+        #<%=wrapperId%> section a span{
+            color:#E77E23;
+        }
+        #<%=wrapperId%> section div {
+            display: none;
+            text-align:center;
+            padding-bottom:5px;
+        }
+        #<%=wrapperId%> section a:hover + div,#<%=wrapperId%> section div:hover {
+            display: block;
+        }
+        <% if (bgTablet!= "") {%>
+        @media (max-width: <%=bpTablet%>px) {
+            .<%=containerClass%> {
+                background-image: url("<%=bgTablet%>");
+            }
+        }
+        <% } %>
+        <% if (bgMobile!= "") {%>
+        @media (max-width: <%=bpMobile%>px) {
+            .<%=containerClass%> {
+                background-image: url("<%=bgMobile%>");
+            }
+        }
+        <% } %>
+
+    </style>
+    <section>
+        <a href="https://github.com/martinratinaud" targte="_blank">Pixel <span>Perfect</span></a>
+        <div>
+            <button data-value="0">Hide</button>
+            <button data-value="0.2">0.2</button>
+            <button data-value="0.8">0.8</button>
+            <button data-value="1">Show</button>
+        </div>
+    </section>
+    <div class="<%=containerClass%>"></div>
+</script>
+

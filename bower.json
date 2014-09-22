@@ -1,0 +1,27 @@
+{
+  "name": "pixel-perfect",
+  "version": "0.1.0",
+  "authors": [
+    "Martin Ratinaud <martinratinaud@gmail.com>"
+  ],
+  "description": "A small javascript utility that helps you overlay a jpg design on top of your html page to ease HTML integration. It supports different size of images in case of a responsive integration",
+  "main": "/js/pixel-perfect.js",
+  "keywords": [
+    "pixel perfect",
+    "responsive",
+    "design",
+    "html",
+    "overlay",
+    "integration",
+    "frontend"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}
