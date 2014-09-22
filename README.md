@@ -49,6 +49,13 @@ var PixelPerfect = function(path,bpMobile,bpTablet,template, ext);
 
 You can also move the layer using ```Shift+Arrow``` keys
 
+
+And finally, you should use bower to install this script
+
+```
+bower install pixel-perfect
+```
+
 #TODOS
 Refactor
 Add more control over layout
