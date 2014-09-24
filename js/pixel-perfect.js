@@ -41,7 +41,12 @@ PixelPerfect.prototype.init = function()
 
         //enable click action to show/hide responsive mask
         me.wrapper.find("button").click(function() {
-            me.container.css("opacity",$(this).data("value"));
+            val = $(this).data("value");
+            if(val == "kill") {
+                me.wrapper.remove();
+            } else {
+                me.container.css("opacity",$(this).data("value"));
+            }
             //TODO save visibility to cookies ?
         });
 
